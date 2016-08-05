@@ -16,6 +16,7 @@ $(function() {
                     Watcher.prototype.maximise(e);
                 });
     }
+    
     Watcher.prototype.prepareFrame = function(site) {
 
         var w = $(window).width() / 2 - 14;
@@ -66,8 +67,8 @@ $(function() {
     
     //TODO gather the URL's from form data
 
-    
-    var quadrantOne = document.getElementById('quad1').value;
+    //Links to the various sites that need to be displayed
+    var quadrantOne = 'http://www.w3schools.com/';
     var quadrantTwo = 'http://ithelp.port.ac.uk'; 
     
     var x = new Watcher([quadrantOne, quadrantTwo, 
