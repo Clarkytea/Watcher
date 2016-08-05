@@ -16,7 +16,6 @@ $(function() {
                     Watcher.prototype.maximise(e);
                 });
     }
-
     Watcher.prototype.prepareFrame = function(site) {
 
         var w = $(window).width() / 2 - 14;
@@ -43,7 +42,6 @@ $(function() {
                 quadrant = 3;
             }
         }
-            
         else {
             if (e.pageY <= h / 2) {
                 quadrant = 2;
@@ -64,8 +62,6 @@ $(function() {
             .width($(window).width())
             .height($(window).height())     
 
-            //fix event handler to something interesting, 
-            //find out variable name for the individual iframe                                         
     };
     
     //TODO gather the URL's from form data
@@ -74,18 +70,15 @@ $(function() {
     var quadrantOne = document.getElementById('quad1').value;
     var quadrantTwo = 'http://ithelp.port.ac.uk'; 
     
-    
     var x = new Watcher([quadrantOne, quadrantTwo, 
                     'http://is-ssddg-app-01.uni.ds.port.ac.uk/DSIGN/oaa/oaa.php', 
                     'https://css-tricks.com/jquery-coffeescript/'])
 
     //Goes back to the main page after hitting space bar
     // As the back-button does not work
-    document.body.ondrag = function(e){
+    document.body.onkeyup = function(e){
     if(e.keyCode == 32){
         location.reload();
     }
     }
-
-
 })
